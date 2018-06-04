@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.broadleafcommerce:broadleaf-third-party-integration-config:default">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/broadleafcommerce/broadleaf-third-party-integration-config/default/broadleaf-third-party-integration-config-default.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/broadleafcommerce/broadleaf-third-party-integration-config/default/broadleaf-third-party-integration-config-default-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/broadleafcommerce/broadleaf-third-party-integration-config/default/broadleaf-third-party-integration-config-default-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
