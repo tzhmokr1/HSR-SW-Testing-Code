@@ -25,3 +25,5 @@ hs_err_pid*
 
 selenium-tests/build/*
 selenium-tests/temp/*
+
+.idea/workspace.xml
