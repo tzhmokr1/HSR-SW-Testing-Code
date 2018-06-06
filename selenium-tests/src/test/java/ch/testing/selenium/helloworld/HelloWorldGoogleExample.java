@@ -30,10 +30,9 @@ public class HelloWorldGoogleExample implements Constants {
 
     @BeforeEach
     public void setup() {
-        // Create a new instance of the html unit driver
+        // Create an instance of the driver of your choice
         //driver = new HtmlUnitDriver();
 
-        // Uncomment this to switch to chromedriver
         System.setProperty("webdriver.chrome.driver",
                 CHROME_DRIVER_PATH);
         driver = new ChromeDriver();
@@ -68,5 +67,4 @@ public class HelloWorldGoogleExample implements Constants {
         Assertions.fail("Implement Testcase");
 
     }
-
 }

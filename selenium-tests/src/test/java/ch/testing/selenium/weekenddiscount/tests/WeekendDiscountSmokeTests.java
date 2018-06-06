@@ -75,12 +75,10 @@ public class WeekendDiscountSmokeTests implements Constants {
         MatcherAssert.assertThat(homePage.getNofObjectsInCart(), Matchers.is(0));
 
         // go to the sauces
-        homePage = HomePage.navigateTo(driver);
         HotSaucesPage hotSaucesPage = homePage.jumpToHotSauces();
 
         // and pick one
-        SauceDetailPage saucePage = hotSaucesPage
-                .sauceDayOfTheDeadHabaneroDetails();
+        SauceDetailPage saucePage = hotSaucesPage.sauceDayOfTheDeadHabaneroDetails();
 
         // now buy this one
         saucePage.buySauce();
@@ -90,7 +88,6 @@ public class WeekendDiscountSmokeTests implements Constants {
 
         // and check that there is 1 product in the cart.
         MatcherAssert.assertThat(homePage.getNofObjectsInCart(), Matchers.is(1));
-
     }
 
 }

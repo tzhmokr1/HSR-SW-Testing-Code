@@ -14,9 +14,8 @@ public class HotSaucesPage extends Page {
 
     public HotSaucesPage(WebDriver driver) {
         super(driver);
-
         if (!(driver.getTitle().startsWith("Hot Sauces"))) {
-            throw new IllegalStateException("This is not the home page");
+            throw new IllegalStateException("This is not the hot sauces page");
         }
         LOG.debug("HotSauces Page created successfully");
     }
@@ -26,5 +25,9 @@ public class HotSaucesPage extends Page {
         return PageFactory.initElements(driver, SauceDetailPage.class);
 
     }
-
 }
+
+
+
+
+

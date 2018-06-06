@@ -38,33 +38,20 @@ public class WeekendDiscountTestWithoutPageObjects implements Constants {
 
     @Test
     public void testAddToCart() throws InterruptedException {
-
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
         driver.get(BASE_URL);
 
-        List<WebElement> nofItemsInCart = driver
-                .findElements(By.className("cart-count-badge"));
+        List<WebElement> nofItemsInCart = driver.findElements(By.className("cart-count-badge"));
         MatcherAssert.assertThat("Should be 0 items in cart", nofItemsInCart.size(), is(0));
 
-
         WebElement navigation = driver.findElement(By.xpath("//div[@id='left-nav']"));
-        WebElement hotSaucesLink = navigation.findElement(By.partialLinkText("HOT"));
+        navigation.findElement(By.partialLinkText("HOT")).click();
 
+        driver.findElement(By.xpath("//a[contains(@href,'day_of_the_dead_habanero_hot_sauce')]")).click();
 
-        hotSaucesLink.click();
+        driver.findElement(By.xpath("//button[contains(@class,'js-addToCart')]")).click();
 
-        WebElement habaneroSauce = driver
-                .findElement(By.xpath("//a[contains(@href,'day_of_the_dead_habanero_hot_sauce')]"));
-
-        habaneroSauce.click();
-
-        WebElement buyButton = driver.findElement(By.xpath("//button[contains(@class,'js-addToCart')]"));
-
-        buyButton.click();
-
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-
-        WebElement itemsInCart = driver
-                .findElement(By.className("cart-count-badge"));
+        WebElement itemsInCart = driver.findElement(By.className("cart-count-badge"));
         MatcherAssert.assertThat("Should be 1 items in cart", itemsInCart.getText(), is("1"));
     }
 }
