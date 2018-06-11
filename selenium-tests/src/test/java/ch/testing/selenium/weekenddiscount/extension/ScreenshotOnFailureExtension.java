@@ -31,11 +31,12 @@ public class ScreenshotOnFailureExtension implements AfterTestExecutionCallback 
     public void afterTestExecution(ExtensionContext context) throws Exception {
         Optional<Throwable> testException = context.getExecutionException();
         if (testException.isPresent()) {
-            LOG.info("Test failed: " + context.getDisplayName());
+            String classMethodName = context.getTestClass().get().getSimpleName() + "_" +context.getDisplayName();
+            LOG.info("Test failed: " + classMethodName);
             WebDriver driver = WebDriverKeeper.getInstance().getDriver();
 
-            FileUtil.saveScreenshotToFile(context.getDisplayName(), driver);
-            FileUtil.writePageSourceToFile(context.getDisplayName(), driver);
+            FileUtil.saveScreenshotToFile(classMethodName, driver);
+            FileUtil.writePageSourceToFile(classMethodName, driver);
         }
 
     }
