@@ -85,7 +85,7 @@ Als Entwicklungsumgebungen wird Intellij oder Eclipse empfohlen.
 #### Verifikation:
 IDE startet fehlerfrei
 
-##Phase 2: Klonen des Repository in lokales Dateisystem
+## Phase 2: Klonen des Repository in lokales Dateisystem
 Um mit dem Code arbeiten zu können, erstellen Sie eine lokale Kopie des ganzen Repositorys.
 1.	Command-Line öffnen
 
@@ -122,7 +122,7 @@ drwxr-xr-x   9 briner  wheel    288  7 Jun 09:53 site
 
 
 ## Phase 3: Projekte in IDE öffnen und kompilieren
-###Intellij
+### Intellij
 * Mit „File  Open“ das Verzeichnis HSR-SW-Testing-Code öffnen
 * Die 5 Module werden angezeigt:
     * admin
@@ -133,7 +133,7 @@ drwxr-xr-x   9 briner  wheel    288  7 Jun 09:53 site
 
 
 
-###Eclipse
+### Eclipse
 * Maven Projekte importieren:
     * Import Projects --> Maven --> Existing Maven Projects  
     * Verzeichnis HSR-SW-Testing-Code wählen --> Parent pom.xml mit 4 Child-POM werden angezeigt  
