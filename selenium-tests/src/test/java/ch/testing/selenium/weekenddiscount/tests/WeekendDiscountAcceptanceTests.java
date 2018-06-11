@@ -58,6 +58,10 @@ public class WeekendDiscountAcceptanceTests implements Constants {
 
     @Test
     public void testWeekendDiscountEnabled() {
+
+        Date within4thWeekend = DateFactory.createDate(2018, 6, 23, 0, 0, 0);
+        DBUtil.setTestTime(within4thWeekend);
+
         // TODO: Implement this
         Assertions.fail("Implement Testcase");
 
@@ -66,6 +70,10 @@ public class WeekendDiscountAcceptanceTests implements Constants {
 
     @Test
     public void testWeekendDiscountDisabled() {
+
+        Date after4thWeekend = DateFactory.createDate(2018, 6, 25, 0, 0, 0);
+        DBUtil.setTestTime(after4thWeekend);
+
         // TODO: Implement this
         Assertions.fail("Implement Testcase");
 
