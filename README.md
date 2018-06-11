@@ -1,14 +1,15 @@
-Hochschule für Technik HSR Rapperswil
+[Hochschule für Technik HSR Rapperswil](http://www.hsr.ch)
 
-MAS in Software Engineering
+[MAS in Software Engineering](https://www.hsr.ch/de/weiterbildung/technik-und-it/mas/mas-software-engineering/uebersicht/)
 ## Modul Software Testing
-
-# Sourcecode für Uebungen
+## Sourcecode für Uebungen
 thomas.briner@gmail.com
 
-# Übungsumgebung
+# Installation Übungsumgebung
 Die praktischen Übungen werden basierend auf dem Code durchgeführt, wie er im Repository unter https://github.com/thomasbriner/HSR-SW-Testing-Code verfügbar ist.
 Die Übungsumgebung besteht aus Java Code, der für die Umsetzung der Unit Tests verwendet wird, einem Webshop als System under Test und einem Rahmen für die Durchführung von Selenium Tests.
+
+Installationsanleitung als pdf: https://github.com/thomasbriner/HSR-SW-Testing-Code/blob/mas2017/Installation_Uebungsumgebung.pdf
 
 ## Phase 1: Vorbereitung der benötigten Tools
 Um die Übungsumgebung nutzen zu können, sind verschiedene Tools notwendig. 
