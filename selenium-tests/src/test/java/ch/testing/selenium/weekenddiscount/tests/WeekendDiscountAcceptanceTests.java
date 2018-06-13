@@ -39,7 +39,6 @@ public class WeekendDiscountAcceptanceTests implements Constants {
     private static final Log LOG = LogFactory
             .getLog(WeekendDiscountAcceptanceTests.class);
 
-    //	@Rule
     public ScreenshotOnFailureExtension screenshot = new ScreenshotOnFailureExtension();
 
     private WebDriver driver;
