@@ -15,8 +15,7 @@ Installationsanleitung als pdf: https://github.com/thomasbriner/HSR-SW-Testing-C
 Um die Übungsumgebung nutzen zu können, sind verschiedene Tools notwendig. 
 ### Java
 Als Programmiersprache wird Java verwendet.
--  Java JDK Versions >= 8
-- Als Programmiersprache wird Java verwendet. 
+-  Java JDK Version 8
 - http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html 
 
 #### Verifikation:
