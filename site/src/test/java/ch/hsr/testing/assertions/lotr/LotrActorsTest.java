@@ -1,18 +1,32 @@
 package ch.hsr.testing.assertions.lotr;
 
-import org.hamcrest.*;
-import org.junit.jupiter.api.Assumptions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import java.util.*;
-import java.util.stream.Collectors;
-
 import static ch.hsr.testing.assertions.lotr.LotrActorsTest.ContainsOnlySpecifiedRacesMatcher.containsOnlySpecifiedRaces;
-import static ch.hsr.testing.assertions.lotr.Race.*;
+import static ch.hsr.testing.assertions.lotr.Race.DWARF;
+import static ch.hsr.testing.assertions.lotr.Race.ELF;
+import static ch.hsr.testing.assertions.lotr.Race.HOBBIT;
+import static ch.hsr.testing.assertions.lotr.Race.MAN;
+import static ch.hsr.testing.assertions.lotr.Race.WIZARD;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.hamcrest.Description;
+import org.hamcrest.Factory;
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
+import org.hamcrest.TypeSafeMatcher;
+import org.hamcrest.core.Is;
+import org.hamcrest.core.IsEqual;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import org.junit.jupiter.api.Assumptions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class LotrActorsTest {
 
@@ -45,8 +59,8 @@ class LotrActorsTest {
     // Tutorial: http://www.vogella.com/tutorials/Hamcrest/article.html
     @Test
     void useHamcrestMatchers() {
-        assertThat(frodo.getName(), is("Frodo"));
-        assertThat(frodo.getAge(), is(33));
+        assertThat(frodo.getName(), Is.is("Frodo"));
+        assertThat(frodo.getAge(), Is.is(33));
     }
 
     // Overview: http://joel-costigliola.github.io/assertj/
