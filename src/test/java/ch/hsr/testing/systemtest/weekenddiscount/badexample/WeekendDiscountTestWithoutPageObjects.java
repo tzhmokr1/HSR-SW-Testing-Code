@@ -8,6 +8,8 @@
 package ch.hsr.testing.systemtest.weekenddiscount.badexample;
 
 import ch.hsr.testing.systemtest.weekenddiscount.Constants;
+import ch.hsr.testing.systemtest.weekenddiscount.util.DBUtil;
+import ch.hsr.testing.systemtest.weekenddiscount.util.DateFactory;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,6 +36,7 @@ public class WeekendDiscountTestWithoutPageObjects implements Constants {
     public void setup() {
         System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
         driver = new ChromeDriver();
+        DBUtil.setTestTime(DateFactory.createDate(2019, 6, 23, 0, 0, 0));
     }
 
     @Test
