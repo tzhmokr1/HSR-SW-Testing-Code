@@ -13,9 +13,9 @@ import ch.hsr.testing.unittest.address.dependencyexample.AddressRetriever;
 import ch.hsr.testing.unittest.address.dependencyexample.AddressRetrieverException;
 import ch.hsr.testing.unittest.address.dependencyexample.api.AuthenticationInformation;
 import ch.hsr.testing.unittest.address.dependencyexample.api.HttpService;
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
@@ -51,7 +51,7 @@ public class AddressRetrieverTest {
 
     private String emptyAddressJSON = "{\"address\":{}";
 
-    @Before
+    @BeforeEach
     public void createRetriever() throws IOException {
         httpServiceMock = mock(HttpService.class);
         retriever = new AddressRetriever(httpServiceMock);
