@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class WeekendDiscountValidatorExceptionHandlingExampleTest {
 
-    WeekendDiscountValidator weekendDiscountValidator = new WeekendDiscountValidator();
+    private WeekendDiscountValidator weekendDiscountValidator = new WeekendDiscountValidator();
 
     @Test
     void isInWeekend() throws ValidatorNotYetInitializedException {
@@ -38,7 +38,7 @@ class WeekendDiscountValidatorExceptionHandlingExampleTest {
         }
 
         Assertions.assertThat(t).isNotNull();
-        Assertions.assertThat(t.getLocalizedMessage()).contains("not initialized");
+        Assertions.assertThat(t.getLocalizedMessage()).contains("has not been initialized");
 
     }
 

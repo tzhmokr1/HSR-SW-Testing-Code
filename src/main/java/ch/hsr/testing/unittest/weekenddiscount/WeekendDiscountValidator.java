@@ -20,7 +20,7 @@ public class WeekendDiscountValidator {
     private static final Log LOG = LogFactory
             .getLog(WeekendDiscountValidator.class);
 
-    private Integer toBeInitialized = new Integer(42);
+    private Integer toBeInitialized = 42;
 
     public WeekendDiscountValidator() {
 
@@ -49,7 +49,7 @@ public class WeekendDiscountValidator {
 
         // make sure a weekend number has been set already
         if (this.weekendNumber == null) {
-            throw new ValidatorNotYetInitializedException();
+            throw new ValidatorNotYetInitializedException("WeekendDiscountValidator has not been initialized correctly!");
         } else {
             // set a calender to the given date
             Calendar nowCal = Calendar.getInstance();
