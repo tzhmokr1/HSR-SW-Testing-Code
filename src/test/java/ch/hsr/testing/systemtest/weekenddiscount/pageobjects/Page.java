@@ -42,6 +42,7 @@ public class Page implements Constants {
     }
 
     public int getNofObjectsInCart() {
+        driver.get(driver.getCurrentUrl());
         List<WebElement> badge = driver.findElements(cartBadgeLocator);
         if (badge.size() > 0) {
             return Integer.parseInt(badge.get(0).getText());
