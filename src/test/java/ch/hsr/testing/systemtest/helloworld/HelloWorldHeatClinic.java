@@ -34,8 +34,7 @@ public class HelloWorldHeatClinic implements Constants {
 
     @BeforeEach
     public void setup() {
-        System.setProperty("webdriver.chrome.driver",
-                CHROME_DRIVER_PATH);
+        System.setProperty("webdriver.chrome.driver", getChromeDriverPath());
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

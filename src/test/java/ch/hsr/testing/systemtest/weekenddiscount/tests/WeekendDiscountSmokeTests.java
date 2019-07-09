@@ -43,7 +43,7 @@ public class WeekendDiscountSmokeTests implements Constants {
 
     @BeforeEach
     public void setup() throws IOException, InterruptedException {
-        System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
+        System.setProperty("webdriver.chrome.driver", getChromeDriverPath());
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         WebDriverKeeper.getInstance().setDriver(driver);

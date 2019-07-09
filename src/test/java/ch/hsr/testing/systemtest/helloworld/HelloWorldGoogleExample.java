@@ -31,11 +31,10 @@ public class HelloWorldGoogleExample implements Constants {
         // Create an instance of the driver of your choice
         //driver = new HtmlUnitDriver();
 
-        System.setProperty("webdriver.chrome.driver",
-                CHROME_DRIVER_PATH);
+        System.setProperty("webdriver.chrome.driver", getChromeDriverPath());
         driver = new ChromeDriver();
 
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
 

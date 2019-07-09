@@ -34,7 +34,7 @@ public class WeekendDiscountTestWithoutPageObjects implements Constants {
 
     @BeforeEach
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
+        System.setProperty("webdriver.chrome.driver", getChromeDriverPath());
         driver = new ChromeDriver();
         DBUtil.setTestTime(DateFactory.createDate(2019, 6, 23, 0, 0, 0));
     }
