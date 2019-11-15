@@ -41,7 +41,7 @@ public class WeekendDiscountAcceptanceTests implements Constants {
 
     @BeforeEach
     public void setup() throws IOException, InterruptedException {
-        System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
+        System.setProperty("webdriver.chrome.driver", getChromeDriverPath());
         driver = new ChromeDriver();
         WebDriverKeeper.getInstance().setDriver(driver);
     }
