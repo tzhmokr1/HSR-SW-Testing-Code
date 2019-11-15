@@ -11,6 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
+*.jar
 *.war
 *.ear
 *.zip
@@ -22,6 +23,9 @@ hs_err_pid*
 
 out
 build
+
+temp/*.html
+temp/*.png
 
 selenium-tests/build/*
 selenium-tests/temp/*
