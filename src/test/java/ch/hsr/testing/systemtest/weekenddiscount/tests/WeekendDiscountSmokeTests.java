@@ -25,7 +25,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -42,7 +41,7 @@ public class WeekendDiscountSmokeTests implements Constants {
 
 
     @BeforeEach
-    public void setup() throws IOException, InterruptedException {
+    public void setup() {
         System.setProperty("webdriver.chrome.driver", getChromeDriverPath());
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

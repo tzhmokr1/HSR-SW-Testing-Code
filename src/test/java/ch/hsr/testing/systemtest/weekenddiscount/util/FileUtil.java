@@ -19,6 +19,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 /**
  * The Class FileUtil. Helps to persist screenshot and page source code in case
  * of failure. Is used by the ScreenshotOnFailureExtension and -Statement
@@ -43,7 +45,7 @@ public class FileUtil {
         File destination = new File(TEMP_DIR + File.separator + testcase + "_"
                 + PAGESOURCE_PREFIX + DATE_FORMAT.format(new Date())
                 + PAGESOURCE_EXTENSION);
-        FileUtils.writeStringToFile(destination, pageSource);
+        FileUtils.writeStringToFile(destination, pageSource, UTF_8);
         LOG.info("PageSource saved to " + destination.getAbsolutePath());
     }
 
