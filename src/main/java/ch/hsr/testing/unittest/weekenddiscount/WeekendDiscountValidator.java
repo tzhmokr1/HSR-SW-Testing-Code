@@ -20,18 +20,11 @@ public class WeekendDiscountValidator {
     private static final Log LOG = LogFactory
             .getLog(WeekendDiscountValidator.class);
 
-    private Integer toBeInitialized = 42;
-
     public WeekendDiscountValidator() {
-
-    }
-
-    public WeekendDiscountValidator(int i){
-
     }
 
     public void initializeWithWeekendNumber(int weekendNumber) {
-        this.weekendNumber = new Integer(weekendNumber);
+        this.weekendNumber = weekendNumber;
     }
 
     /**

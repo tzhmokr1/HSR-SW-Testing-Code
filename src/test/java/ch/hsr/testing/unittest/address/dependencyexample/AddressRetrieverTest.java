@@ -9,8 +9,6 @@
 package ch.hsr.testing.unittest.address.dependencyexample;
 
 import ch.hsr.testing.unittest.address.api.Address;
-import ch.hsr.testing.unittest.address.dependencyexample.AddressRetriever;
-import ch.hsr.testing.unittest.address.dependencyexample.AddressRetrieverException;
 import ch.hsr.testing.unittest.address.dependencyexample.api.AuthenticationInformation;
 import ch.hsr.testing.unittest.address.dependencyexample.api.HttpService;
 import org.junit.jupiter.api.Assertions;
@@ -89,9 +87,8 @@ public class AddressRetrieverTest {
                 .thenThrow(new IOException());
 
 
-        Assertions.assertThrows(AddressRetrieverException.class, () -> {
-            retriever.retrieve(40.0, -104.0, mock(AuthenticationInformation.class));
-        });
+        Assertions.assertThrows(AddressRetrieverException.class,
+                () -> retriever.retrieve(40.0, -104.0, mock(AuthenticationInformation.class)));
     }
 
 }

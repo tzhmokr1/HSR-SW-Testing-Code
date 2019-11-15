@@ -37,7 +37,7 @@ public class ShippingAddressSelector {
     private Optional<Address> getNewest(List<Address> addressList, boolean hasToBeApproved) {
         Predicate<Address> approvalFilter;
         if (hasToBeApproved) {
-            approvalFilter = (a -> a.isApproved());
+            approvalFilter = Address::isApproved;
         } else {
             approvalFilter = (a -> true);
         }

@@ -40,7 +40,7 @@ public class WeekendDiscountTestWithoutPageObjects implements Constants {
     }
 
     @Test
-    public void testAddToCart() throws InterruptedException {
+    public void testAddToCart() {
         driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
         driver.get(BASE_URL);
 

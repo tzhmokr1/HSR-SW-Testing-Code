@@ -31,12 +31,7 @@ public class RomanNumberConverter {
     private static Optional<RomanNumber> getBiggestPossibleNumber(int remainder) {
         List<RomanNumber> romanNumbers = Arrays.asList(ATOMIC_NUMBERS);
         romanNumbers
-                .sort(new Comparator<RomanNumber>() {
-                    @Override
-                    public int compare(RomanNumber o1, RomanNumber o2) {
-                        return new Integer(o2.getArabic()).compareTo(o1.getArabic());
-                    }
-                });
+                .sort((o1, o2) -> Integer.compare(o2.getArabic(), o1.getArabic()));
         return romanNumbers.stream()
                 .filter(rn -> rn.getArabic() <= remainder)
                 .findFirst();

@@ -7,12 +7,12 @@ import java.nio.file.Paths;
 
 public interface Constants {
 
-    public final String HOST = "localhost";
-
-    public final String BASE_URL = "http://" + HOST + ":8080/";
-
     // TODO: choose your os: either linux, windows or mac
-    public final String OS = "mac";
+    String OS = "mac";
+
+    String HOST = "localhost";
+
+    String BASE_URL = "http://" + HOST + ":8080/";
 
     default String getChromeDriverPath() {
         try {

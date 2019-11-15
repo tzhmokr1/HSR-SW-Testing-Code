@@ -25,12 +25,9 @@ public class HttpServiceImpl implements HttpService {
    public String get(String url, AuthenticationInformation authenticationInformation) throws IOException {
       CloseableHttpClient client = HttpClients.createDefault();
       HttpGet request = new HttpGet(url);
-      CloseableHttpResponse response = client.execute(request);
-      try {
+      try (CloseableHttpResponse response = client.execute(request)) {
          HttpEntity entity = response.getEntity();
          return EntityUtils.toString(entity);
-      } finally {
-         response.close();
       }
    }
 }

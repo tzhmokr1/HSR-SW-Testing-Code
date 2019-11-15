@@ -18,13 +18,12 @@ public class AddressRetriever {
     }
 
     public Address retrieve(double latitude, double longitude, AuthenticationInformation authenticationInformation) throws AddressRetrieverException {
-        String parms = String.format("lat=%.6f&lon=%.6f", latitude, longitude);
-        String response = null;
+        String params = String.format("lat=%.6f&lon=%.6f", latitude, longitude);
         JSONObject obj;
         try {
-            response = httpService.get(
+            String response = httpService.get(
                     "http://open.mapquestapi.com/nominatim/v1/reverse?format=json&"
-                            + parms, authenticationInformation);
+                            + params, authenticationInformation);
 
             obj = (JSONObject) new JSONParser().parse(response);
         } catch (IOException | org.json.simple.parser.ParseException e) {

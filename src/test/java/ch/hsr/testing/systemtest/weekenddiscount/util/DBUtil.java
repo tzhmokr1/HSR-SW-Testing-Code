@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * The Class DBUtil. Utility class for reseting the test data.
+ * The Class DBUtil. Utility class for resetting the test data.
  * <p>
  * The user and password should be read from the properties...
  */
@@ -39,18 +39,13 @@ public class DBUtil implements Constants {
     public static void setTestTime(Date date) {
 
         Connection conn = null;
-        Statement stmt = null;
         try {
             conn = connectToDB();
-            stmt = conn.createStatement();
+            Statement stmt = conn.createStatement();
             String sql = "UPDATE BLC_TESTING_TIME SET TESTING_TIME = '"
                     + DATE_FORMAT.format(date) + "'";
             stmt.executeUpdate(sql);
             conn.commit();
-
-        } catch (SQLException se) {
-            // Handle errors for JDBC
-            se.printStackTrace();
         } catch (Exception e) {
             // Handle errors for Class.forName
             e.printStackTrace();
@@ -61,9 +56,8 @@ public class DBUtil implements Constants {
 
     private static Connection connectToDB() throws SQLException,
             ClassNotFoundException {
-        Connection conn = null;
         Class.forName(JDBC_DRIVER);
-        conn = DriverManager.getConnection(DB_URL, USER, PASS);
+        Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
         return conn;
 
     }

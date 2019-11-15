@@ -1,6 +1,5 @@
 package ch.hsr.testing.unittest.assertions.tree;
 
-import ch.hsr.testing.unittest.assertions.tree.TreeNode;
 import org.hamcrest.*;
 import org.junit.jupiter.api.Test;
 
@@ -43,8 +42,7 @@ public class TreeNodeTest {
         TreeNode leaf3 = new TreeNode(87);
         TreeNode inner1 = new TreeNode(leaf1, leaf2, 27);
         TreeNode inner2 = new TreeNode(leaf3, null, 90);
-        TreeNode root = new TreeNode(inner1, inner2, 60);
-        return root;
+        return new TreeNode(inner1, inner2, 60);
     }
 
     private TreeNode createTree2() {
@@ -54,8 +52,7 @@ public class TreeNodeTest {
         TreeNode leaf4 = new TreeNode(92);
         TreeNode inner1 = new TreeNode(leaf1, leaf2, 27);
         TreeNode inner2 = new TreeNode(leaf3, leaf4, 90);
-        TreeNode root = new TreeNode(inner1, inner2, 60);
-        return root;
+        return new TreeNode(inner1, inner2, 60);
     }
 
     public static class TreeNodeMatcher
