@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/boot-community-demo.iml" filepath="$PROJECT_DIR$/boot-community-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/admin/boot-community-demo-admin.iml" filepath="$PROJECT_DIR$/admin/boot-community-demo-admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/api/boot-community-demo-api.iml" filepath="$PROJECT_DIR$/api/boot-community-demo-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/core/boot-community-demo-core.iml" filepath="$PROJECT_DIR$/core/boot-community-demo-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/site/boot-community-demo-site.iml" filepath="$PROJECT_DIR$/site/boot-community-demo-site.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-tests.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-tests.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-tests_main.iml" group="selenium-tests" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-tests_test.iml" group="selenium-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hsr_sw_testing.iml" filepath="$PROJECT_DIR$/.idea/modules/hsr_sw_testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hsr_sw_testing.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hsr_sw_testing.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hsr_sw_testing.test.iml" filepath="$PROJECT_DIR$/.idea/modules/hsr_sw_testing.test.iml" />
     </modules>
   </component>
 </project>

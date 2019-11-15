@@ -6,10 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="boot-community-demo-admin" />
-        <module name="boot-community-demo-api" />
-        <module name="boot-community-demo-core" />
-        <module name="boot-community-demo-site" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,6 +14,8 @@
       <module name="boot-community-demo-api" target="1.8" />
       <module name="boot-community-demo-core" target="1.8" />
       <module name="boot-community-demo-site" target="1.8" />
+      <module name="hsr_sw_testing.main" target="1.8" />
+      <module name="hsr_sw_testing.test" target="1.8" />
       <module name="selenium-tests_main" target="1.8" />
       <module name="selenium-tests_test" target="1.8" />
     </bytecodeTargetLevel>
