@@ -1,6 +1,5 @@
 package ch.hsr.testing.systemtest.weekenddiscount.util;
 
-import ch.hsr.testing.systemtest.weekenddiscount.util.DBUtil;
 import org.junit.jupiter.api.Test;
 
 class DBUtilTest {

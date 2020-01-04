@@ -1,6 +1,5 @@
 package ch.hsr.testing.unittest.parametrized;
 
-import ch.hsr.testing.unittest.parametrized.PrimeChecker;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.params.ParameterizedTest;

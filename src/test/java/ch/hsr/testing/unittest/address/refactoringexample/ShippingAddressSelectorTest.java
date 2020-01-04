@@ -2,7 +2,6 @@ package ch.hsr.testing.unittest.address.refactoringexample;
 
 import ch.hsr.testing.unittest.address.api.Address;
 import ch.hsr.testing.unittest.address.api.AddressHistoryChain;
-import ch.hsr.testing.unittest.address.refactoringexample.ShippingAddressSelector;
 import ch.hsr.testing.unittest.address.refactoringexample.api.Company;
 import ch.hsr.testing.unittest.address.refactoringexample.api.CustomerForShipping;
 import org.junit.jupiter.api.Test;

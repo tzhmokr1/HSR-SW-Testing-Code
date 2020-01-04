@@ -4,7 +4,7 @@
  * Module Software Testing
  * 
  * Thomas Briner, thomas.briner@gmail.com
- */package ch.hsr.testing.unittest.util;
+ */package ch.hsr.testing.unittest.weekenddiscount.util;
 
 import java.util.Calendar;
 import java.util.Date;

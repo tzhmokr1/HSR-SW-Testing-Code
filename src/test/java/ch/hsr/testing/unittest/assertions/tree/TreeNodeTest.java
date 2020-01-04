@@ -10,7 +10,7 @@ public class TreeNodeTest {
 
 
     /**
-     * Without Custom Matcher: All properties have to be checked one by one
+     * Without Custom Matcher: All nodes have to be checked one by one
      */
     @Test
     public void compareUsingStandardMatchers() {
@@ -55,8 +55,9 @@ public class TreeNodeTest {
         return new TreeNode(inner1, inner2, 60);
     }
 
-    public static class TreeNodeMatcher
-            extends TypeSafeMatcher<TreeNode> {
+    // BEGIN SOLUTION
+
+    public static class TreeNodeMatcher extends TypeSafeMatcher<TreeNode> {
 
         private final TreeNode expected;
 
@@ -95,6 +96,9 @@ public class TreeNodeTest {
         }
 
     }
+
+    // END SOLUTION
+
 
 
 }
