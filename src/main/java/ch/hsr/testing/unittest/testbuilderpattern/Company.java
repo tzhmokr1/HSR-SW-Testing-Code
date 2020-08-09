@@ -1,7 +1,5 @@
-package ch.hsr.testing.unittest.address.refactoringexample.api;
+package ch.hsr.testing.unittest.testbuilderpattern;
 
-
-import ch.hsr.testing.unittest.address.api.AddressHistoryChain;
 
 public class Company {
     private final AddressHistoryChain addressHistoryChain;

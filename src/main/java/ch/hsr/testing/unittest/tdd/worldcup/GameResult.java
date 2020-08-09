@@ -1,4 +1,4 @@
-package ch.hsr.testing.unittest.tdd;
+package ch.hsr.testing.unittest.tdd.worldcup;
 
 import java.util.Objects;
 

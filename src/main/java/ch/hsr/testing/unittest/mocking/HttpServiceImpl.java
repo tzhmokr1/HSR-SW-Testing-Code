@@ -6,11 +6,9 @@
  * We make no guarantees that this code is fit for any purpose. 
  * Visit http://www.pragmaticprogrammer.com/titles/utj2 for more book information.
 ***/
-package ch.hsr.testing.unittest.address.dependencyexample.impl;
+package ch.hsr.testing.unittest.mocking;
 
 
-import ch.hsr.testing.unittest.address.dependencyexample.api.AuthenticationInformation;
-import ch.hsr.testing.unittest.address.dependencyexample.api.HttpService;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -22,7 +20,8 @@ import java.io.IOException;
 
 public class HttpServiceImpl implements HttpService {
 
-   public String get(String url, AuthenticationInformation authenticationInformation) throws IOException {
+   @Override
+   public String get(String url) throws IOException {
       CloseableHttpClient client = HttpClients.createDefault();
       HttpGet request = new HttpGet(url);
       try (CloseableHttpResponse response = client.execute(request)) {

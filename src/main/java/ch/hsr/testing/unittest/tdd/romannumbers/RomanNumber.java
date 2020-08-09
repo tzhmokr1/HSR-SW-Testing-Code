@@ -1,4 +1,4 @@
-package ch.hsr.testing.unittest.tdd;
+package ch.hsr.testing.unittest.tdd.romannumbers;
 
 public class RomanNumber {
     private String roman;

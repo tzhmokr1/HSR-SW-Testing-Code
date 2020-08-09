@@ -6,14 +6,18 @@
  * We make no guarantees that this code is fit for any purpose. 
  * Visit http://www.pragmaticprogrammer.com/titles/utj2 for more book information.
  ***/
-package ch.hsr.testing.unittest.address.api;
+package ch.hsr.testing.unittest.testbuilderpattern;
+
+import org.json.simple.JSONObject;
+
+import java.util.Objects;
 
 public class Address {
+    private final String houseNumber;
     private final String road;
     private final String city;
     private final String state;
     private final String zip;
-    private final String houseNumber;
 
     private boolean approved;
 
@@ -45,45 +49,50 @@ public class Address {
         return zip;
     }
 
+    public String getHouseNumber() {
+        return houseNumber;
+    }
+
     public boolean isApproved() {
         return approved;
     }
 
-    public String getHouseNumber() {
-
-        return houseNumber;
+    public static Address fromJSON(JSONObject address) {
+        String houseNumber = (String) address.get("house_number");
+        String road = (String) address.get("road");
+        String city = (String) address.get("city");
+        String state = (String) address.get("state");
+        String zip = (String) address.get("postcode");
+        return new Address(houseNumber, road, city, state, zip);
     }
-
 
     @Override
     public String toString() {
-        return houseNumber + " " + road + ", " + city + " " + state + " " + zip;
+        return "Address{" +
+                "houseNumber='" + houseNumber + '\'' +
+                ", road='" + road + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", approved=" + approved +
+                '}';
     }
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Address address = (Address) o;
-
-        if (road != null && !road.equals(address.road)) return false;
-        if (city != null && !city.equals(address.city)) return false;
-        if (state != null && !state.equals(address.state)) return false;
-        if (zip != null && !zip.equals(address.zip)) return false;
-        return (houseNumber == null && address.houseNumber == null)
-                || (houseNumber != null
-                && houseNumber.equals(address.houseNumber));
+        return approved == address.approved &&
+                Objects.equals(houseNumber, address.houseNumber) &&
+                Objects.equals(road, address.road) &&
+                Objects.equals(city, address.city) &&
+                Objects.equals(state, address.state) &&
+                Objects.equals(zip, address.zip);
     }
 
     @Override
     public int hashCode() {
-        int result = road.hashCode();
-        result = 31 * result + city.hashCode();
-        result = 31 * result + state.hashCode();
-        result = 31 * result + zip.hashCode();
-        result = 31 * result + houseNumber.hashCode();
-        return result;
+        return Objects.hash(houseNumber, road, city, state, zip, approved);
     }
 }

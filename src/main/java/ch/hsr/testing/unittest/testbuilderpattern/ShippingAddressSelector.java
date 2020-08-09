@@ -1,8 +1,5 @@
-package ch.hsr.testing.unittest.address.refactoringexample;
+package ch.hsr.testing.unittest.testbuilderpattern;
 
-
-import ch.hsr.testing.unittest.address.api.Address;
-import ch.hsr.testing.unittest.address.refactoringexample.api.CustomerForShipping;
 
 import java.util.Collections;
 import java.util.List;

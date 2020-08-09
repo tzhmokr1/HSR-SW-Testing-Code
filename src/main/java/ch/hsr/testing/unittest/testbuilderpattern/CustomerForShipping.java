@@ -1,6 +1,4 @@
-package ch.hsr.testing.unittest.address.refactoringexample.api;
-
-import ch.hsr.testing.unittest.address.api.AddressHistoryChain;
+package ch.hsr.testing.unittest.testbuilderpattern;
 
 import java.util.Optional;
 

@@ -1,4 +1,6 @@
-package ch.hsr.testing.unittest.tdd;
+package ch.hsr.testing.unittest.tdd.worldcup;
+
+// BEGIN SOLUTION
 
 public class WorldCupCalculator {
     public int calculate(GameResult tipp, GameResult result) {
@@ -19,3 +21,5 @@ public class WorldCupCalculator {
         return 0;
     }
 }
+
+// END SOLUTION

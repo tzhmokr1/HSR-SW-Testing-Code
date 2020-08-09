@@ -1,4 +1,4 @@
-package ch.hsr.testing.unittest.address.api;
+package ch.hsr.testing.unittest.testbuilderpattern;
 
 import java.util.ArrayList;
 import java.util.List;

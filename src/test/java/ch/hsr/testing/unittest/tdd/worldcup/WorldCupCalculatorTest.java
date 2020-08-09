@@ -1,5 +1,7 @@
-package ch.hsr.testing.unittest.tdd;
+package ch.hsr.testing.unittest.tdd.worldcup;
 
+import ch.hsr.testing.unittest.tdd.worldcup.GameResult;
+import ch.hsr.testing.unittest.tdd.worldcup.WorldCupCalculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

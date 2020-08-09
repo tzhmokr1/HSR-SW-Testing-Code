@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 
 import static ch.hsr.testing.unittest.assertions.lotr.LotrActorsTest.ContainsOnlySpecifiedRacesMatcher.containsOnlySpecifiedRaces;
 import static ch.hsr.testing.unittest.assertions.lotr.Race.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LotrActorsTest {
 
@@ -39,16 +38,16 @@ class LotrActorsTest {
     // Explanation: https://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions
     @Test
     void useOldFashionedAssertions() {
-        assertEquals("Frodo", frodo.getName());
-        assertEquals(33, frodo.getAge());
+        org.junit.jupiter.api.Assertions.assertEquals("Frodo", frodo.getName());
+        org.junit.jupiter.api.Assertions.assertEquals(33, frodo.getAge());
     }
 
 
     // Tutorial: http://www.vogella.com/tutorials/Hamcrest/article.html
     @Test
     void useHamcrestMatchers() {
-        MatcherAssert.assertThat(frodo.getName(), Matchers.equalTo("Frodo"));
-        MatcherAssert.assertThat(frodo.getAge(), Matchers.equalTo(33));
+        org.hamcrest.MatcherAssert.assertThat(frodo.getName(), org.hamcrest.Matchers.equalTo("Frodo"));
+        org.hamcrest.MatcherAssert.assertThat(frodo.getAge(), org.hamcrest.Matchers.equalTo(33));
     }
 
     // Overview: http://joel-costigliola.github.io/assertj/
@@ -67,7 +66,6 @@ class LotrActorsTest {
                 .isEqualTo("Frodo");
     }
 
-
     // Tutorial: http://www.baeldung.com/hamcrest-custom-matchers
     @Test
     void useCustomMatcher() {
@@ -77,9 +75,8 @@ class LotrActorsTest {
 
     }
 
-
     public static class ContainsOnlySpecifiedRacesMatcher
-            extends TypeSafeMatcher<List<TolkienCharacter>> {
+            extends TypeSafeDiagnosingMatcher<List<TolkienCharacter>> {
 
         List<Race> races;
 
@@ -88,9 +85,18 @@ class LotrActorsTest {
         }
 
         @Override
-        protected boolean matchesSafely(List<TolkienCharacter> characters) {
+        protected boolean matchesSafely(List<TolkienCharacter> characters, Description mismatchDescription) {
+            Set<Race> undesiredRaces = getUndesiredRaces(characters);
+            mismatchDescription.appendText(" contains characters of additional race(s)").appendValue(undesiredRaces);
             return characters.stream()
                     .allMatch(character -> races.contains(character.getRace()));
+        }
+
+        private Set<Race> getUndesiredRaces(List<TolkienCharacter> characters) {
+            return characters.stream()
+                    .filter(character -> !races.contains(character.getRace()))
+                    .map(TolkienCharacter::getRace)
+                    .collect(Collectors.toSet());
         }
 
         @Override
@@ -98,22 +104,10 @@ class LotrActorsTest {
             description.appendText(" contains only characters of races " + races);
         }
 
-        @Override
-        protected void describeMismatchSafely(List<TolkienCharacter> characters, Description mismatchDescription) {
-            Set<Race> undesiredRaces = characters.stream()
-                    .filter(character -> !races.contains(character.getRace()))
-                    .map(TolkienCharacter::getRace)
-                    .collect(Collectors.toSet());
-            mismatchDescription.appendText(" contains characters of additional race(s)").appendValue(undesiredRaces);
-        }
-
-
         @Factory
         static Matcher<List<TolkienCharacter>> containsOnlySpecifiedRaces(List<Race> races) {
             return new ContainsOnlySpecifiedRacesMatcher(races);
         }
 
     }
-
-
 }

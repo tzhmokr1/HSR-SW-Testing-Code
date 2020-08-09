@@ -1,14 +1,15 @@
-package ch.hsr.testing.unittest.address.refactoringexample;
+package ch.hsr.testing.unittest.testbuilderpattern;
 
-import ch.hsr.testing.unittest.address.api.Address;
-import ch.hsr.testing.unittest.address.api.AddressHistoryChain;
-import ch.hsr.testing.unittest.address.refactoringexample.api.Company;
-import ch.hsr.testing.unittest.address.refactoringexample.api.CustomerForShipping;
+import ch.hsr.testing.unittest.testbuilderpattern.Address;
+import ch.hsr.testing.unittest.testbuilderpattern.AddressHistoryChain;
+import ch.hsr.testing.unittest.testbuilderpattern.Company;
+import ch.hsr.testing.unittest.testbuilderpattern.CustomerForShipping;
+import ch.hsr.testing.unittest.testbuilderpattern.ShippingAddressSelector;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
-import static ch.hsr.testing.unittest.address.refactoringexample.ShippingAddressSelector.INTERNAL_ADDRESS;
+import static ch.hsr.testing.unittest.testbuilderpattern.ShippingAddressSelector.INTERNAL_ADDRESS;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -103,11 +104,11 @@ public class ShippingAddressSelectorTest {
         ShippingAddressSelector shippingAddressSelector = new ShippingAddressSelector();
 
         AddressHistoryChain addressHistoryChain = new AddressHistoryChain();
-        Address approvedAddress = new Address("13", "ApprovedRoad", "ApprovedCity", "ApprovedState", "4242");
+        Address approvedAddress = new Address("ApprovedHouseNumber", "ApprovedRoad", "ApprovedCity", "ApprovedState", "4242");
         approvedAddress.setApproved(true);
         addressHistoryChain.addAddress(approvedAddress);
 
-        Address unapprovedAddress = new Address("13", "UnapprovedRoad", "UnapprovedCity", "UnapprovedState", "4242");
+        Address unapprovedAddress = new Address("UnapprovedHouseNumber", "UnapprovedRoad", "UnapprovedCity", "UnapprovedState", "4242");
         unapprovedAddress.setApproved(false);
         addressHistoryChain.addAddress(unapprovedAddress);
 

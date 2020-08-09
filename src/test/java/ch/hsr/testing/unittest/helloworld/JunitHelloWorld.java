@@ -4,13 +4,12 @@ import org.junit.jupiter.api.*;
 
 public class JunitHelloWorld {
 
-
     public JunitHelloWorld() {
         System.out.println("Constructor");
     }
 
     @BeforeAll
-    public static void beforeAll(){
+    public static void beforeAll() {
         System.out.println("beforeAll");
     }
 
@@ -29,15 +28,13 @@ public class JunitHelloWorld {
         System.out.println("afterEach");
     }
 
-    @Disabled
     @Test
-    public void test1(){
+    public void test1() {
         System.out.println("test1");
     }
 
-    @Disabled
     @Test
-    public void test2(){
+    public void test2() {
         System.out.println("test1");
     }
 

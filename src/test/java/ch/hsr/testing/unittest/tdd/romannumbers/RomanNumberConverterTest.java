@@ -1,6 +1,7 @@
-package ch.hsr.testing.unittest.tdd;
+package ch.hsr.testing.unittest.tdd.romannumbers;
 
 
+import ch.hsr.testing.unittest.tdd.romannumbers.RomanNumberConverter;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,7 +10,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-class RomanNumbersTest {
+class RomanNumberConverterTest {
 
     @ParameterizedTest(name = "{index} => arabic number:{0} => roman number:{1}")
     @MethodSource("createTestInput")
