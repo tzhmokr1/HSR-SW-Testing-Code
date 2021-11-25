@@ -1,14 +1,15 @@
 package ch.hsr.testing.unittest.mocking;
 
-import ch.hsr.testing.unittest.testbuilderpattern.Address;
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
-
-import java.io.IOException;
-
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
+import java.io.IOException;
+
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
+import ch.hsr.testing.unittest.testbuilderpattern.Address;
 
 public class AddressRetrieverTest {
 
